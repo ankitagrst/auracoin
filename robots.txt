@@ -1,0 +1,62 @@
+# Robots.txt for Aurachain - The Future of Wealth
+# https://aurachain.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the site
+Allow: /index.html
+Allow: /img/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+
+# Disallow any admin or private directories (if they exist in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Sitemap location
+Sitemap: https://aurachain.com/sitemap.xml
+
+# Crawl-delay (optional - can be removed if not needed)
+# Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

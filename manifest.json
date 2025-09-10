@@ -1,0 +1,39 @@
+{
+  "name": "Aurachain - The Future of Wealth",
+  "short_name": "Aurachain",
+  "description": "The Future of Wealth, Built on Blockchain Technology. Join the revolutionary cryptocurrency platform that's changing the way we think about digital assets.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#d4af37",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["finance", "business", "cryptocurrency", "blockchain"],
+  "icons": [
+    {
+      "src": "/img/aurachain.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/aurachain.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/img/aurachain.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "dir": "ltr",
+  "iarc_rating_id": ""
+}

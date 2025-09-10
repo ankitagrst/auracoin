@@ -1,0 +1,40 @@
+/* TEAM */
+    Developer: Aurachain Core
+    Location: Team Aurachain
+
+/* THANKS */
+    Bootstrap Team - https://getbootstrap.com/
+    Font Awesome - https://fontawesome.com/
+    Particle.js - Vincent Garreau
+    AOS Library - Michał Sajnóg
+    Google Fonts - fonts.google.com
+
+/* SITE */
+    Last update: 2025/09/10
+    Standards: HTML5, CSS3, JavaScript ES6+
+    Components: Bootstrap 5, Particle.js, AOS
+    Software: VS Code, Git
+    Framework: Bootstrap 5.3.0
+    Languages: HTML, CSS, JavaScript
+
+/* SPECIAL THANKS */
+    To the open-source community for making amazing tools
+    To the blockchain community for inspiration
+    To all future contributors
+
+                                    .
+                                   /|\
+                          ,       / | \
+                         /(      /  |  \
+                        / (\    /   |   \
+                       //) \\  /    |    \
+                      // )  ))/     |     \
+                     // /  // |     |      \
+                    // /  //  |     |       \
+                   / \_  //   |     |        \
+                  /   \//    /|     |\        \
+                 /    //    / |     | \        \
+                /    //    /  |     |  \        \
+               /____//____/   |_____|   \________\
+
+    Built with ❤️ for the future of finance

@@ -1,0 +1,14 @@
+# Security.txt for Aurachain
+# https://securitytxt.org/
+
+Contact: mailto:security@aurachain.com
+Contact: https://aurachain.com/contact
+Expires: 2026-09-10T23:59:59.000Z
+Encryption: https://aurachain.com/pgp-key.txt
+Preferred-Languages: en
+Canonical: https://aurachain.com/.well-known/security.txt
+Policy: https://aurachain.com/security-policy
+Acknowledgments: https://aurachain.com/security-acknowledgments
+
+# Please report security vulnerabilities to our security team
+# We appreciate responsible disclosure and will respond within 72 hours

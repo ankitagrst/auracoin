@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Server Error | Aurachain</title>
+    <meta name="description" content="Server error occurred. We're working to fix this issue.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #d4af37;
+            --dark: #0d0d0d;
+            --light: #f5f5f5;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+            color: var(--light);
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: #dc3545;
+            text-shadow: 0 0 30px rgba(220, 53, 69, 0.5);
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(45deg, #d4af37, #f5d76e);
+            border: none;
+            color: #000;
+            font-weight: 600;
+            padding: 12px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            color: #000;
+        }
+        
+        .server-icon {
+            font-size: 4rem;
+            color: #dc3545;
+            margin-bottom: 2rem;
+            animation: shake 1s infinite;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="server-icon">
+            <i class="fas fa-server"></i>
+        </div>
+        <div class="error-code">500</div>
+        <h1 class="error-title">Server Error</h1>
+        <p class="error-message">
+            Oops! Something went wrong on our end. Our blockchain engineers are working hard to fix this issue. 
+            Please try again in a few moments.
+        </p>
+        <a href="/" class="btn-gold">
+            <i class="fas fa-home me-2"></i>Return to Homepage
+        </a>
+        <a href="javascript:history.back()" class="btn-gold">
+            <i class="fas fa-arrow-left me-2"></i>Go Back
+        </a>
+        <div class="mt-4">
+            <p class="text-muted">
+                <small>Error Code: 500 | Aurachain - The Future of Wealth</small>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
