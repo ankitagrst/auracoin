@@ -1075,36 +1075,42 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Aurachain</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#features">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#tokenomics">Tokenomics</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#roadmap">Roadmap</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#team">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-            <a href="#early-access" class="btn btn-gold">Get Early Access</a>
-          </li>
-        </ul>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Aurachain</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tokenomics">Tokenomics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#roadmap">Roadmap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item mt-3">
+              <a href="#early-access" class="btn btn-gold w-100">Get Early Access</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -1675,9 +1681,9 @@
       // Back to Top Button
       const backToTop = document.getElementById('backToTop');
       
-      // Navbar collapse elements
+      // Offcanvas elements
       const navbarToggler = document.querySelector('.navbar-toggler');
-      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const offcanvas = document.querySelector('#offcanvasNavbar');
       const navLinks = document.querySelectorAll('.nav-link');
       
       // Back to top button visibility
@@ -1701,8 +1707,8 @@
       navLinks.forEach(link => {
         link.addEventListener('click', () => {
           if (window.innerWidth <= 991) { // Only for mobile view
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-            bsCollapse.hide();
+            const bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
+            bsOffcanvas.hide();
           }
         });
       });
@@ -1724,8 +1730,8 @@
             
             // Close mobile menu if open
             if (window.innerWidth <= 991) {
-              const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-              bsCollapse.hide();
+              const bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
+              bsOffcanvas.hide();
             }
           }
         });
