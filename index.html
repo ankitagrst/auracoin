@@ -333,6 +333,25 @@
       scroll-behavior: smooth;
     }
     
+    /* Ensure proper mobile scrolling */
+    @media (max-width: 991.98px) {
+      body {
+        overflow-x: hidden;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+      }
+      
+      html {
+        overflow-x: hidden;
+        overflow-y: auto !important;
+      }
+      
+      /* Prevent scroll issues on iOS */
+      body.modal-open {
+        overflow: hidden !important;
+      }
+    }
+    
     /* Hero Section */
     .hero {
       min-height: 100vh;
@@ -2078,14 +2097,34 @@
       // Enhanced offcanvas functionality
       const offcanvasElement = document.getElementById('mobileMenu');
       if (offcanvasElement) {
+        
+        // Function to ensure body scroll is enabled
+        const enableBodyScroll = () => {
+          document.body.style.overflow = '';
+          document.documentElement.style.overflow = '';
+        };
+        
+        // Function to disable body scroll
+        const disableBodyScroll = () => {
+          document.body.style.overflow = 'hidden';
+        };
+        
+        // Ensure body scroll is enabled on page load
+        enableBodyScroll();
+        
         // Add smooth animation when opening
         offcanvasElement.addEventListener('show.bs.offcanvas', function () {
-          document.body.style.overflow = 'hidden';
+          disableBodyScroll();
         });
         
         // Add smooth animation when closing
         offcanvasElement.addEventListener('hide.bs.offcanvas', function () {
-          document.body.style.overflow = 'auto';
+          enableBodyScroll();
+        });
+        
+        // Safety check: ensure scroll is enabled when offcanvas is fully hidden
+        offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
+          enableBodyScroll();
         });
         
         // Add listener when offcanvas is fully shown
@@ -2111,6 +2150,9 @@
                 offcanvas.hide();
               }
               
+              // Ensure body scroll is enabled immediately
+              enableBodyScroll();
+              
               // Then scroll to the target element after a short delay
               setTimeout(() => {
                 const targetElement = document.querySelector(href);
@@ -2133,10 +2175,93 @@
             if (offcanvas) {
               offcanvas.hide();
             }
+            // Ensure body scroll is enabled immediately
+            enableBodyScroll();
           });
         }
+        
+        // Safety check: Enable scroll on window resize (in case user rotates device)
+        window.addEventListener('resize', function() {
+          const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+          if (!offcanvas || !offcanvas._isShown) {
+            enableBodyScroll();
+          }
+        });
+        
+        // Safety check: Enable scroll if user presses Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            enableBodyScroll();
+          }
+        });
       }
+      
+      // Additional safety check: Ensure body scroll is always enabled on page load/reload
+      window.addEventListener('load', function() {
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+      });
+      
+      // Safety check for page visibility change (when user switches tabs)
+      document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) {
+          const offcanvasElement = document.getElementById('mobileMenu');
+          if (offcanvasElement) {
+            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+            if (!offcanvas || !offcanvas._isShown) {
+              document.body.style.overflow = '';
+              document.documentElement.style.overflow = '';
+            }
+          }
+        }
+      });
     });
+  </script>
+  
+  <!-- Mobile scroll fix script -->
+  <script>
+    // Additional mobile scroll fix
+    (function() {
+      'use strict';
+      
+      // Force enable scrolling on mobile devices
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        
+        // Ensure scrolling is enabled on page load
+        document.addEventListener('DOMContentLoaded', function() {
+          document.body.style.overflow = '';
+          document.documentElement.style.overflow = '';
+          document.body.style.overflowY = 'auto';
+        });
+        
+        // Fix for iOS scroll issues
+        document.addEventListener('touchmove', function(e) {
+          // Allow scrolling unless offcanvas is open
+          const offcanvasElement = document.getElementById('mobileMenu');
+          if (offcanvasElement) {
+            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+            if (!offcanvas || !offcanvas._isShown) {
+              // Offcanvas is not open, allow scrolling
+              return true;
+            }
+          }
+        }, { passive: true });
+        
+        // Periodically check and fix scroll issues (safety net)
+        setInterval(function() {
+          const offcanvasElement = document.getElementById('mobileMenu');
+          if (offcanvasElement) {
+            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+            if (!offcanvas || !offcanvas._isShown) {
+              if (document.body.style.overflow === 'hidden') {
+                document.body.style.overflow = '';
+                document.body.style.overflowY = 'auto';
+              }
+            }
+          }
+        }, 1000);
+      }
+    })();
   </script>
 </body>
 </html>
