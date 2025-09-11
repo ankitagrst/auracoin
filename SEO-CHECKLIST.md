@@ -1,4 +1,4 @@
-# SEO Implementation Checklist for Aurachain
+# SEO Implementation Checklist for WLFI COIN
 
 ## ✅ Completed Items
 
@@ -53,7 +53,7 @@
 ### Content Optimization
 - [ ] **Keywords Research** - Target specific crypto keywords
 - [ ] **Blog Section** - Add blog for fresh content
-- [ ] **FAQ Section** - Common questions about Aurachain
+- [ ] **FAQ Section** - Common questions about WLFI COIN
 - [ ] **Testimonials** - User reviews and testimonials
 
 ### Social Media

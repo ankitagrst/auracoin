@@ -1,7 +1,7 @@
-# Security.txt for Aurachain
+# Security.txt for WLFI COIN
 # https://securitytxt.org/
 
-Contact: mailto:security@aurachain.com
+Contact: mailto:security@wlfcoin.com
 Contact: https://aurachain.com/contact
 Expires: 2026-09-10T23:59:59.000Z
 Encryption: https://aurachain.com/pgp-key.txt

@@ -1,6 +1,6 @@
 /* TEAM */
-    Developer: Aurachain Core
-    Location: Team Aurachain
+    Developer: WLFI COIN Team
+    Location: WLFI COIN Foundation
 
 /* THANKS */
     Bootstrap Team - https://getbootstrap.com/

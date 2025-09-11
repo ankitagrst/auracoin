@@ -1,5 +1,5 @@
-# Robots.txt for Aurachain - The Future of Wealth
-# https://aurachain.com/robots.txt
+# Robots.txt for WLFI COIN - The Future of Wealth
+# https://wlfcoin.com/robots.txt
 
 User-agent: *
 Allow: /

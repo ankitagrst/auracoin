@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://aurachain.com/</loc>
+    <loc>https://wlfcoin.com/</loc>
     <lastmod>2025-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,49 +14,56 @@
 
   <!-- Main page sections (anchor links) -->
   <url>
-    <loc>https://aurachain.com/#home</loc>
+    <loc>https://wlfcoin.com/#home</loc>
     <lastmod>2025-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://aurachain.com/#about</loc>
+    <loc>https://wlfcoin.com/#about</loc>
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://aurachain.com/#features</loc>
+    <loc>https://wlfcoin.com/#features</loc>
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://aurachain.com/#tokenomics</loc>
+    <loc>https://wlfcoin.com/#tokenomics</loc>
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://aurachain.com/#roadmap</loc>
+    <loc>https://wlfcoin.com/#roadmap</loc>
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aurachain.com/#team</loc>
+    <loc>https://wlfcoin.com/#team</loc>
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://aurachain.com/#contact</loc>
+    <loc>https://wlfcoin.com/#contact</loc>
+    <lastmod>2025-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://wlfcoin.com/#faq</loc>
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

@@ -1,6 +1,6 @@
-# Aurachain - The Future of Wealth
+# WLFI COIN - The Future of Wealth
 
-A modern, responsive cryptocurrency landing page built with Bootstrap 5, featuring blockchain technology and Web3 elements.
+A modern, responsive cryptocurrency landing page for WLFI COIN, featuring airdrop information for Doge and Pi Coin, built with Bootstrap 5 and Web3 elements.
 
 ## 🚀 Features
 
